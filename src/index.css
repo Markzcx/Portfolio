@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ==========================================================================
+   GLOBAL VARIABLES (LIGHT MODE DEFAULT)
+   ========================================================================== */
+:root {
+  /* Backgrounds - Softened to reduce screen glare */
+  --bg-body: #f1f5f9;       /* Deepened slightly to make the cards pop gently */
+  --bg-card: #fcfcfd;       /* An "off-white" paper color, removing the harsh #ffffff */
+  --bg-nav: rgba(252, 252, 253, 0.85); /* Matched to the soft card background */
+  --contact-bg: #e2e8f0;    /* Just a touch deeper for section separation */
+
+  /* Text - Reduced contrast to eliminate sharpness */
+  --text-main: #1e293b;     /* Slate 800 (softer than the previous near-black) */
+  --text-muted: #475569;
+  --text-light: #64748b;
+
+  /* Borders - Lightened up just a fraction to match the softer aesthetic */
+  --border-main: rgba(15, 23, 42, 0.12); 
+  --border-light: rgba(15, 23, 42, 0.06);
+
+  /* Accents / Brand */
+  --brand-main: #0ea5e9;
+  --brand-hover: #0284c7;
+  --brand-bg: rgba(14, 165, 233, 0.1);
+  --brand-border: rgba(14, 165, 233, 0.3);
+
+  /* Fixed Background Dot Pattern */
+  --hero-dot: rgba(15, 23, 42, 0.10); /* Softened the background dots */
+
+  /* Shadows - Smoothed out to blend with the off-white cards */
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+
+  /* Tag Colors (Light Mode) */
+  --tag-blue-bg: rgba(14, 165, 233, 0.1);
+  --tag-blue-txt: #0284c7;
+  --tag-blue-border: rgba(14, 165, 233, 0.2);
+  
+  --tag-teal-bg: rgba(20, 184, 166, 0.1);
+  --tag-teal-txt: #0d9488;
+  --tag-teal-border: rgba(20, 184, 166, 0.2);
+
+  --tag-violet-bg: rgba(139, 92, 246, 0.1);
+  --tag-violet-txt: #7c3aed;
+  --tag-violet-border: rgba(139, 92, 246, 0.2);
+
+  --tag-amber-bg: rgba(245, 158, 11, 0.1);
+  --tag-amber-txt: #d97706;
+  --tag-amber-border: rgba(245, 158, 11, 0.2);
+}
+
+/* ==========================================================================
+   DARK MODE OVERRIDES
+   ========================================================================== */
+html.dark {
+  /* Backgrounds */
+  --bg-body: #020617;
+  --bg-card: #0f172a;
+  --bg-nav: rgba(2, 6, 23, 0.85);
+  --contact-bg: #020617;    /* Matches dark body background */
+
+  /* Text */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+
+  /* Borders - Kept faint for dark mode */
+  --border-main: rgba(255, 255, 255, 0.12);
+  --border-light: rgba(255, 255, 255, 0.06);
+
+  /* Accents / Brand */
+  --brand-main: #38bdf8;
+  --brand-hover: #0ea5e9;
+  --brand-bg: rgba(56, 189, 248, 0.1);
+  --brand-border: rgba(56, 189, 248, 0.3);
+
+  /* Fixed Background Dot Pattern - Light dots for dark background */
+  --hero-dot: rgba(255, 255, 255, 0.08);
+
+  /* Shadows - Harsher shadows for dark mode depth */
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+  /* Tag Colors (Dark Mode) */
+  --tag-blue-txt: #38bdf8;
+  --tag-teal-txt: #2dd4bf;
+  --tag-violet-txt: #a78bfa;
+  --tag-amber-txt: #fbbf24;
+}
+
+/* Ensure the body actually uses the variables */
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-main);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ==========================================================================
+   UI / UX POLISH FIXES
+   ========================================================================== */
+
+/* Keeps section headings from hiding under your sticky nav when clicked */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; 
+}
+
+/* Keyboard Accessibility Outline */
+*:focus-visible {
+  outline: 2px solid var(--brand-main);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
