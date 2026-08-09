@@ -1,24 +1,25 @@
 import { useState, useEffect, useRef, ReactNode } from 'react'
 
-// ─── File Imports (Vite handles these automatically) ──────────────────────────
-import resumePdf from './imports/Mark_Anthony_C._Fernandez_Resume.pdf' 
-import profilePic from './imports/Mark Anthony C. Fernandez 2X2 Pic.jpg'
-import volunteerPic1 from './imports/DICT2.jpg'
-import projectPic from './imports/Cons.png'
-import odcLogo from './imports/OnedocLogo.jpg' 
-import dictLogo from './imports/dict-logo.png' 
-import ciscoLogo from './imports/cisco.jpg' // Make sure the exact filename matches what you have!
-import portLogo from './imports/PORTLOGO.png'
+// ─── Direct Paths from Public Folder (No more imports!) ──────────────────────────
+const resumePdf = '/resume.pdf' 
+const profilePic = '/profile.jpg'
+const volunteerPic1 = '/DICT2.jpg'
+const projectPic = '/cons.png'
+const odcLogo = '/onedoc.jpg' 
+const dictLogo = '/dictlogo.png' 
+const ciscoLogo = '/cisco.jpg'
+const portLogo = '/PORTLOGO.png'
 
 // Project Images
-import omadaPic from './imports/OmadaPic.png'
-import ad1 from './imports/ad1.png'
-import ad2 from './imports/ad2.png'
-import ad3 from './imports/ad3.png'
-import dict1 from './imports/DICT1.jpg'
-import dict2 from './imports/DICT2.jpg'
+const omadaPic = '/omadapic.png'
+const ad1 = '/ad1.png'
+const ad2 = '/ad2.png'
+const ad3 = '/ad3.png'
+const dict1 = '/DICT1.jpg'
+const dict2 = '/DICT2.jpg'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
+// (Wala ka nang babaguhin sa ibaba nito, tuloy-tuloy na 'yan sa NAV_LINKS, etc.)
 
 const NAV_LINKS = ['About', 'Experience', 'Projects', 'Skills', 'Certifications', 'Contact']
 
