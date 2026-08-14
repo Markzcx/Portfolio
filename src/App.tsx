@@ -17,6 +17,11 @@ const ad2 = '/ad2.png'
 const ad3 = '/ad3.png'
 const dict1 = '/DICT1.jpg'
 const dict2 = '/DICT2.jpg'
+const monitor1 = '/monitor1.png'
+const monitor2 = '/monitor2.png'
+const monitor3 = '/monitor3.png'
+const monitor4 = '/monitor4.png'
+const monitor5 = '/monitor5.png'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 // (Wala ka nang babaguhin sa ibaba nito, tuloy-tuloy na 'yan sa NAV_LINKS, etc.)
@@ -148,6 +153,14 @@ const PROJECTS = [
     size: 'large',
     icon: '🌐',
     images: [omadaPic], // Single Image
+  },
+  {
+    title: 'Centralized Network Monitoring Platform',
+    description: 'Developed a custom, real-time infrastructure monitoring platform to track POS terminals, servers, and network devices across a large-scale theme park. Engineered a custom backend using Python and SNMPv3 to poll device telemetry (CPU, RAM, latency, interfaces), storing logs securely in a centralized database. The system features a live dashboard with heartbeat status, resource threshold alerts, and automated activity streams to drastically accelerate root-cause analysis and minimize operational downtime.',
+    tags: ['Python', 'SNMPv3', 'Network Monitoring', 'SQLite', 'Dashboard'],
+    size: 'large',
+    icon: '📊',
+    images: [monitor1, monitor2, monitor3, monitor4, monitor5],
   },
   {
     title: 'Active Directory Onboarding Tool',
