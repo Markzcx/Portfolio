@@ -172,7 +172,7 @@ const PROJECTS = [
   },
   {
     title: 'Free Wi-Fi 4All  (VSAT Deployment)',
-    description: 'Assisted in large-scale VSAT satellite installations across public sites, hardware setup, structured cabling, connectivity testing, and fault isolation.',
+    description: 'Executed end-to-end VSAT satellite deployments across 6 geographically challenging sites—including 4 remote mountainous terrains, 1 isolated island community, and an educational facility. Managed complex hardware setup, precise antenna alignment, structured cabling, and rigorous connectivity testing to establish reliable network links in off-grid locations.',
     tags: ['VSAT', 'Satellite', 'Government', 'Field Deployment'],
     size: 'medium',
     icon: '🛰️',
