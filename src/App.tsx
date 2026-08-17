@@ -622,43 +622,46 @@ function About() {
   return (
     <section id="about" style={{ padding: '5rem 2rem', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-light)', position: 'relative' }}>
       
+      {/* FULL-SCREEN HOVER ZOOM (Pinalaki para kitang-kita ang details) */}
       <div
         style={{
           position: 'fixed',
           inset: 0,
           zIndex: 99999,
-          pointerEvents: 'none', 
+          pointerEvents: 'none', // Para hindi maka-istorbo sa pag-scroll
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
+        {/* Dark Blur Background */}
         <div 
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'rgba(15, 23, 42, 0.3)',
-            backdropFilter: 'blur(12px)',
+            background: 'rgba(15, 23, 42, 0.7)',
+            backdropFilter: 'blur(8px)',
             opacity: isHovered ? 1 : 0,
             transition: 'opacity 0.3s ease'
           }}
         />
 
+        {/* The Expanded Large Picture */}
         <div 
           style={{
             position: 'relative',
-            width: '520px',
-            height: '520px',
-            maxWidth: 'min(85vw, 80vh)', 
-            maxHeight: 'min(85vw, 80vh)',
+            width: '90vw',           // Sobrang laki na nito!
+            maxWidth: '1000px',
+            height: '85vh',
             borderRadius: '12px',
             border: '2px solid var(--brand-main)',
-            boxShadow: '0 25px 60px rgba(0,0,0,0.4)',
+            boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
             overflow: 'hidden',
             zIndex: 2,
             opacity: isHovered ? 1 : 0,
             transform: isHovered ? 'scale(1) translateY(0)' : 'scale(0.8) translateY(20px)',
             transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15)',
+            backgroundColor: 'var(--bg-card)'
           }}
         >
           <img 
@@ -668,8 +671,8 @@ function About() {
             style={{ 
               width: '100%', 
               height: '100%', 
-              objectFit: 'cover',
-              transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+              objectFit: 'contain', // Papasok ng buo yung picture nang walang napuputol
+              transform: isHovered ? 'scale(1.02)' : 'scale(1)',
               transition: 'transform 0.6s ease'
             }} 
           />
@@ -686,8 +689,8 @@ function About() {
                 I am an IT Systems & Network Support Specialist with hands-on experience driving operational continuity across MSP and multi-site environments.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.75, color: 'var(--text-muted)', marginBottom: '3rem' }}>
-  My core strength lies in bridging the gap between frontline user support and backend infrastructure. Whether I am managing a 24/7 hospital helpdesk, racking servers in a data center, or deploying secure VLAN-segmented networks for enterprise theme parks, my goal is always the same: to build and maintain resilient IT systems that keep operations running smoothly and securely. I don't just close tickets, I optimize infrastructure—actively designing custom scripts, systems, and deployment solutions that streamline operations, eliminate bottlenecks, and ensure seamless rollouts from the ground up.
-</p>
+                My core strength lies in bridging the gap between frontline user support and backend infrastructure. Whether I am managing a 24/7 hospital helpdesk, racking servers in a data center, or deploying secure VLAN-segmented networks for enterprise theme parks, my goal is always the same: to build and maintain resilient IT systems that keep operations running smoothly and securely. I don't just close tickets, I optimize infrastructure—actively designing custom scripts, systems, and deployment solutions that streamline operations, eliminate bottlenecks, and ensure seamless rollouts from the ground up.
+              </p>
 
               <div 
                 style={{
@@ -702,6 +705,7 @@ function About() {
                   <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '-0.01em' }}>Beyond the Screen</h3>
                 </div>
                 
+                {/* Dito natin ilalagay yung trigger ng Hover */}
                 <div 
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
@@ -722,6 +726,7 @@ function About() {
                     />
                   </div>
                   
+                  {/* Floating Indicator na pwedeng i-hover */}
                   <div 
                     style={{
                       position: 'absolute',
@@ -732,7 +737,7 @@ function About() {
                       color: '#fff',
                       fontFamily: 'var(--font-mono)',
                       fontSize: '0.65rem',
-                      padding: '4px 10px',
+                      padding: '6px 14px',
                       borderRadius: '9999px',
                       backdropFilter: 'blur(4px)',
                       pointerEvents: 'none',
