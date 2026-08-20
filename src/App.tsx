@@ -160,7 +160,7 @@ const PROJECTS = [
     size: 'large',
     icon: '💻',
     images: [ccna1, ccna2, ccna3, ccna4, ccna5, ccna6],
-    downloadLink: '/downloads/CCNA_Simulator.exe',
+    downloadLink: '/downloads/CCNA_Simulator.zip',
   },
 
   {
