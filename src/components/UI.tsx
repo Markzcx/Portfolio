@@ -10,7 +10,7 @@ export function Reveal({ children, delay = 0 }: { children: ReactNode, delay?: n
       style={{
         opacity: isIntersecting ? 1 : 0,
         transform: isIntersecting ? 'translateY(0)' : 'translateY(30px)',
-        transition: `opacity 0.7s ease-out, transform 0.7s ease-out`,
+        transition: `background-color 0.4s, color 0.4s, border-color 0.4s, opacity 0.7s ease-out, transform 0.7s ease-out`,
         transitionDelay: `${delay}ms`,
       }}
     >
@@ -113,7 +113,7 @@ export function Nav({ active, isDark, toggleDark }: { active: string, isDark: bo
               alignItems: 'center',
               textDecoration: 'none',
               zIndex: 51,
-              transition: 'transform 0.2s ease'
+              transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, transform 0.2s ease'
             }}
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
@@ -145,7 +145,7 @@ export function Nav({ active, isDark, toggleDark }: { active: string, isDark: bo
                       padding: '0.35rem 0.75rem',
                       borderRadius: '6px',
                       backgroundColor: isActive ? 'var(--brand-bg)' : 'transparent',
-                      transition: 'color 0.15s, background 0.15s',
+                      transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, color 0.15s, background 0.15s',
                     }}
                     onMouseEnter={(e) => {
                       ;(e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand-main)'
@@ -192,7 +192,7 @@ export function Nav({ active, isDark, toggleDark }: { active: string, isDark: bo
                 justifyContent: 'center',
                 cursor: 'pointer',
                 color: 'var(--text-main)',
-                transition: 'background 0.2s',
+                transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, background 0.2s',
               }}
               aria-label="Toggle Dark Mode"
             >

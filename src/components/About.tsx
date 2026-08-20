@@ -28,7 +28,7 @@ export function About() {
             background: 'rgba(15, 23, 42, 0.7)',
             backdropFilter: 'blur(8px)',
             opacity: isHovered ? 1 : 0,
-            transition: 'opacity 0.3s ease'
+            transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, opacity 0.3s ease'
           }}
         />
 
@@ -46,7 +46,7 @@ export function About() {
             zIndex: 2,
             opacity: isHovered ? 1 : 0,
             transform: isHovered ? 'scale(1) translateY(0)' : 'scale(0.8) translateY(20px)',
-            transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15)',
+            transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15)',
             backgroundColor: 'var(--bg-card)'
           }}
         >
@@ -59,7 +59,7 @@ export function About() {
               height: '100%', 
               objectFit: 'contain', // Papasok ng buo yung picture nang walang napuputol
               transform: isHovered ? 'scale(1.02)' : 'scale(1)',
-              transition: 'transform 0.6s ease'
+              transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, transform 0.6s ease'
             }} 
           />
         </div>
@@ -128,7 +128,7 @@ export function About() {
                       backdropFilter: 'blur(4px)',
                       pointerEvents: 'none',
                       opacity: isHovered ? 0 : 1,
-                      transition: 'opacity 0.2s ease'
+                      transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, opacity 0.2s ease'
                     }}
                   >
                     <span>🔍 Hover to Expand</span>
@@ -155,7 +155,7 @@ export function About() {
                     border: '1px solid var(--border-main)',
                     borderRadius: '12px',
                     padding: '1.25rem',
-                    transition: 'border-color 0.15s, box-shadow 0.15s',
+                    transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, border-color 0.15s, box-shadow 0.15s',
                   }}
                   onMouseEnter={(e) => {
                     ;(e.currentTarget as HTMLDivElement).style.borderColor = 'var(--brand-border)'

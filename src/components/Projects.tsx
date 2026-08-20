@@ -36,7 +36,7 @@ export function Projects() {
             <button 
               onClick={() => setSelectedProject(null)}
               aria-label="Close Project Modal" 
-              style={{ position: 'absolute', top: '1rem', right: '1rem', backgroundColor: 'rgba(0,0,0,0.7)', color: '#fff', border: 'none', width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', zIndex: 999, backdropFilter: 'blur(4px)', transition: 'background 0.2s' }}
+              style={{ position: 'absolute', top: '1rem', right: '1rem', backgroundColor: 'rgba(0,0,0,0.7)', color: '#fff', border: 'none', width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', zIndex: 999, backdropFilter: 'blur(4px)', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, background 0.2s' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.9)'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.7)'}
             >
@@ -75,7 +75,7 @@ export function Projects() {
                       <div 
                         key={idx} 
                         onClick={() => setActiveImgIndex(idx)}
-                        style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: idx === activeImgIndex ? '#38bdf8' : 'rgba(255,255,255,0.4)', cursor: 'pointer', transition: 'background 0.2s' }} 
+                        style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: idx === activeImgIndex ? '#38bdf8' : 'rgba(255,255,255,0.4)', cursor: 'pointer', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, background 0.2s' }} 
                       />
                     ))}
                   </div>
@@ -121,7 +121,7 @@ export function Projects() {
               return (
                 <div
                   key={project.title} className={isLarge ? "span-2" : "span-1"}
-                  style={{ backgroundColor: 'var(--bg-body)', border: '1px solid var(--border-main)', borderRadius: '16px', padding: '1.75rem', transition: 'border-color 0.15s, box-shadow 0.15s, transform 0.15s', display: 'flex', flexDirection: 'column' }}
+                  style={{ backgroundColor: 'var(--bg-body)', border: '1px solid var(--border-main)', borderRadius: '16px', padding: '1.75rem', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, border-color 0.15s, box-shadow 0.15s, transform 0.15s', display: 'flex', flexDirection: 'column' }}
                   onMouseEnter={(e) => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = 'var(--brand-border)'; el.style.boxShadow = 'var(--card-shadow-hover)'; el.style.transform = 'translateY(-2px)' }}
                   onMouseLeave={(e) => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = 'var(--border-main)'; el.style.boxShadow = 'none'; el.style.transform = 'translateY(0)' }}
                 >
@@ -137,7 +137,7 @@ export function Projects() {
                     <div style={{ display: 'flex', gap: '10px' }}>
                       <button
                         onClick={() => handleOpenModal(project)}
-                        style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
+                        style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, background 0.2s, color 0.2s' }}
                         onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--border-main)' }}
                         onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--brand-bg)' }}
                       >
@@ -149,7 +149,7 @@ export function Projects() {
                         <a
                           href={/* @ts-ignore */ project.downloadLink}
                           download
-                          style={{ textDecoration: 'none', alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
+                          style={{ textDecoration: 'none', alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, background 0.2s, color 0.2s' }}
                           onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
                           onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}
                         >

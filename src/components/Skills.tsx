@@ -67,7 +67,7 @@ export function Skills() {
                     fontSize: '0.78rem',
                     fontWeight: 500,
                     fontFamily: 'var(--font-mono)',
-                    transition: 'border-color 0.12s, color 0.12s',
+                    transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, border-color 0.12s, color 0.12s',
                     cursor: 'default',
                   }}
                   onMouseEnter={(e) => {

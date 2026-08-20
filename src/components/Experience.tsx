@@ -14,7 +14,7 @@ export function Experience() {
             {EXPERIENCE.map((job, ji) => {
               const isOpen = openRole === ji;
               return (
-                <div key={job.company} style={{ backgroundColor: 'var(--bg-card)', border: `1px solid ${isOpen ? 'var(--brand-border)' : 'var(--border-main)'}`, borderRadius: '16px', overflow: 'hidden', boxShadow: isOpen ? 'var(--card-shadow-hover)' : 'var(--card-shadow)', transition: 'border-color 0.2s, box-shadow 0.2s' }}>
+                <div key={job.company} style={{ backgroundColor: 'var(--bg-card)', border: `1px solid ${isOpen ? 'var(--brand-border)' : 'var(--border-main)'}`, borderRadius: '16px', overflow: 'hidden', boxShadow: isOpen ? 'var(--card-shadow-hover)' : 'var(--card-shadow)', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, border-color 0.2s, box-shadow 0.2s' }}>
                   <button onClick={() => setOpenRole(isOpen ? -1 : ji)} className="exp-btn" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.5rem 1.75rem', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', gap: '1rem', color: 'inherit' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1 }}>
                       
@@ -35,10 +35,10 @@ export function Experience() {
                     <div className="exp-tags" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
                       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-light)', backgroundColor: 'var(--bg-body)', padding: '0.25rem 0.6rem', borderRadius: '6px' }}>{job.period}</span>
                       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: '1px solid var(--brand-border)', padding: '0.2rem 0.55rem', borderRadius: '9999px' }}>{job.type}</span>
-                      <span style={{ color: 'var(--text-light)', fontSize: '1rem', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease', display: 'block' }}>▾</span>
+                      <span style={{ color: 'var(--text-light)', fontSize: '1rem', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, transform 0.3s ease', display: 'block' }}>▾</span>
                     </div>
                   </button>
-                  <div style={{ display: 'grid', gridTemplateRows: isOpen ? '1fr' : '0fr', transition: 'grid-template-rows 0.35s ease-out' }}>
+                  <div style={{ display: 'grid', gridTemplateRows: isOpen ? '1fr' : '0fr', transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, grid-template-rows 0.35s ease-out' }}>
                     <div style={{ overflow: 'hidden' }}>
                       <div style={{ borderTop: '1px solid var(--border-light)', padding: '1.5rem 1.75rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         {job.entries.map((entry) => (

@@ -21,7 +21,7 @@ export function Certifications() {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '1rem',
-                    transition: 'border-color 0.15s, box-shadow 0.15s',
+                    transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, border-color 0.15s, box-shadow 0.15s',
                   }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLDivElement
@@ -84,7 +84,7 @@ export function Certifications() {
                         padding: '0.4rem 0.8rem',
                         backgroundColor: 'var(--brand-bg)',
                         borderRadius: '6px',
-                        transition: 'background 0.2s'
+                        transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, background 0.2s'
                       }}
                       onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
                       onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}

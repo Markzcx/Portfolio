@@ -27,10 +27,10 @@
   --border-light: rgba(15, 23, 42, 0.06);
 
   /* Accents / Brand */
-  --brand-main: #0ea5e9;
-  --brand-hover: #0284c7;
-  --brand-bg: rgba(14, 165, 233, 0.1);
-  --brand-border: rgba(14, 165, 233, 0.3);
+  --brand-main: #10b981;
+  --brand-hover: #059669;
+  --brand-bg: rgba(16, 185, 129, 0.1);
+  --brand-border: rgba(16, 185, 129, 0.3);
 
   /* Fixed Background Dot Pattern */
   --hero-dot: rgba(15, 23, 42, 0.10); /* Softened the background dots */
@@ -77,9 +77,9 @@ html.dark {
   --border-light: rgba(255, 255, 255, 0.06);
 
   /* Accents / Brand */
-  --brand-main: #38bdf8;
-  --brand-hover: #0ea5e9;
-  --brand-bg: rgba(56, 189, 248, 0.1);
+  --brand-main: #60a5fa;
+  --brand-hover: #3b82f6;
+  --brand-bg: rgba(96, 165, 250, 0.15);
   --brand-border: rgba(56, 189, 248, 0.3);
 
   /* Fixed Background Dot Pattern - Light dots for dark background */
@@ -132,4 +132,8 @@ html {
   outline: 2px solid var(--brand-main);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+*, *::before, *::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }

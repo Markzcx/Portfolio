@@ -49,7 +49,7 @@ export function Contact() {
                     </div>
                     <a 
                       href="mailto:markfernandez101010@gmail.com" 
-                      style={{ fontSize: '1.05rem', color: 'var(--brand-main)', textDecoration: 'none', fontWeight: 600, transition: 'opacity 0.2s' }}
+                      style={{ fontSize: '1.05rem', color: 'var(--brand-main)', textDecoration: 'none', fontWeight: 600, transition: 'background-color 0.4s, color 0.4s, border-color 0.4s, opacity 0.2s' }}
                       onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
                       onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                     >
