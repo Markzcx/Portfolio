@@ -11,6 +11,7 @@ const ciscoLogo = '/cisco.jpg'
 const portLogo = '/PORTLOGO.png'
 
 // Project Images
+const ccnaSim = '/ccna_sim.png'
 const omadaPic = '/omadapic.png'
 const ad1 = '/ad1.png'
 const ad2 = '/ad2.png'
@@ -146,6 +147,16 @@ const SKILL_GROUPS = [
 ]
 
 const PROJECTS = [
+  {
+    title: 'CCNA 200-301 Desktop Simulator',
+    description: 'A fully functional desktop application developed in Python (Tkinter & ttkbootstrap) designed to help aspiring network engineers prepare for the Cisco CCNA 200-301 exam. It features a dynamically generated quiz system with 150+ verified questions across all 6 core CCNA topics, real-time grading, anti-cheat validation, history tracking via SQLite, and detailed rationales for every answer.',
+    tags: ['Python', 'Tkinter', 'SQLite', 'PyInstaller', 'Desktop App'],
+    size: 'large',
+    icon: '💻',
+    images: [ccnaSim],
+    downloadLink: '/downloads/CCNA_Simulator.exe',
+  },
+
   {
     title: 'Omada Network Deployment',
     description: 'Designed and deployed an enterprise-grade Omada-based network with VLAN segmentation and ACL policies for a live commercial environment.',
@@ -1004,14 +1015,27 @@ function Projects() {
                       {project.tags.slice(0, 3).map((tag) => <Pill key={tag} label={tag} color={i % 2 === 0 ? 'teal' : 'blue'} />)}
                       {project.tags.length > 3 && <span style={{ fontSize: '0.7rem', color: 'var(--text-light)', alignSelf: 'center', marginLeft: '0.2rem' }}>+{project.tags.length - 3}</span>}
                     </div>
-                    <button
-                      onClick={() => handleOpenModal(project)}
-                      style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
-                      onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--border-main)' }}
-                      onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--brand-bg)' }}
-                    >
-                      View Project ↗
-                    </button>
+                    {/* @ts-ignore */}
+                    {project.downloadLink ? (
+                      <a
+                        href={/* @ts-ignore */ project.downloadLink}
+                        download
+                        style={{ textDecoration: 'none', alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}
+                      >
+                        Download CCNA_Simulator ⬇
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => handleOpenModal(project)}
+                        style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--border-main)' }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--brand-bg)' }}
+                      >
+                        View Project ↗
+                      </button>
+                    )}
                   </div>
                 </div>
               )
