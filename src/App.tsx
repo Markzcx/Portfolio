@@ -1040,7 +1040,7 @@ function Projects() {
                           onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
                           onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}
                         >
-                          Download CCNA_Simulator ⬇
+                          Download CCNA_Simulator (Password: ccna) ⬇
                         </a>
                       )}
                     </div>
