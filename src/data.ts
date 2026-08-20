@@ -156,7 +156,7 @@ export const PROJECTS = [
   {
     title: 'CCNA 200-301 Desktop Simulator',
     description: 'A fully functional desktop application developed in Python (Tkinter & ttkbootstrap) designed to help aspiring network engineers prepare for the Cisco CCNA 200-301 exam. It features a dynamically generated quiz system with 150+ verified questions across all 6 core CCNA topics, real-time grading, anti-cheat validation, history tracking via SQLite, and detailed rationales for every answer.',
-    tags: ['Python', 'Tkinter', 'SQLite', 'PyInstaller', 'Desktop App'],
+    tags: ['Python', 'Tkinter', 'SQLite', 'PyInstaller', 'Antigravity Gemini', 'Desktop App'],
     size: 'large',
     icon: '💻',
     images: [ccna1, ccna2, ccna3, ccna4, ccna5, ccna6],
@@ -174,7 +174,7 @@ export const PROJECTS = [
   {
     title: 'Centralized Network Monitoring Platform',
     description: 'Developed a custom, real-time infrastructure monitoring platform to track POS terminals, servers, and network devices across a large-scale theme park. Engineered a custom backend using Python and SNMPv3 to poll device telemetry (CPU, RAM, latency, interfaces), storing logs securely in a centralized database. The system features a live dashboard with heartbeat status, resource threshold alerts, and automated activity streams to drastically accelerate root-cause analysis and minimize operational downtime.',
-    tags: ['Python', 'SNMPv3', 'Network Monitoring', 'SQLite', 'Dashboard'],
+    tags: ['Python', 'SNMPv3', 'Network Monitoring', 'SQLite', 'Codex', 'Claude', 'Dashboard'],
     size: 'large',
     icon: '📊',
     images: [monitor1, monitor2, monitor3, monitor4, monitor5],
