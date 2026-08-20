@@ -1261,7 +1261,7 @@ function Certifications() {
                       onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
                       onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}
                     >
-                      View Credential ↗
+                      Verify Certificate ↗
                     </a>
                   </div>
                 </div>
