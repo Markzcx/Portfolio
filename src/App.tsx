@@ -11,6 +11,12 @@ const ciscoLogo = '/cisco.jpg'
 const portLogo = '/PORTLOGO.png'
 
 // Project Images
+const ccna1 = '/CCNA1.png'
+const ccna2 = '/CCNA2.png'
+const ccna3 = '/CCNA3.png'
+const ccna4 = '/CCNA4.png'
+const ccna5 = '/CCNA5.png'
+const ccna6 = '/CCNA6.png'
 const ccnaSim = '/ccna_sim.png'
 const omadaPic = '/omadapic.png'
 const ad1 = '/ad1.png'
@@ -153,7 +159,7 @@ const PROJECTS = [
     tags: ['Python', 'Tkinter', 'SQLite', 'PyInstaller', 'Desktop App'],
     size: 'large',
     icon: '💻',
-    images: [ccnaSim],
+    images: [ccna1, ccna2, ccna3, ccna4, ccna5, ccna6],
     downloadLink: '/downloads/CCNA_Simulator.exe',
   },
 
@@ -1015,18 +1021,7 @@ function Projects() {
                       {project.tags.slice(0, 3).map((tag) => <Pill key={tag} label={tag} color={i % 2 === 0 ? 'teal' : 'blue'} />)}
                       {project.tags.length > 3 && <span style={{ fontSize: '0.7rem', color: 'var(--text-light)', alignSelf: 'center', marginLeft: '0.2rem' }}>+{project.tags.length - 3}</span>}
                     </div>
-                    {/* @ts-ignore */}
-                    {project.downloadLink ? (
-                      <a
-                        href={/* @ts-ignore */ project.downloadLink}
-                        download
-                        style={{ textDecoration: 'none', alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}
-                      >
-                        Download CCNA_Simulator ⬇
-                      </a>
-                    ) : (
+                    <div style={{ display: 'flex', gap: '10px' }}>
                       <button
                         onClick={() => handleOpenModal(project)}
                         style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
@@ -1035,7 +1030,20 @@ function Projects() {
                       >
                         View Project ↗
                       </button>
-                    )}
+                      
+                      {/* @ts-ignore */}
+                      {project.downloadLink && (
+                        <a
+                          href={/* @ts-ignore */ project.downloadLink}
+                          download
+                          style={{ textDecoration: 'none', alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 600, color: 'var(--brand-main)', backgroundColor: 'var(--brand-bg)', border: 'none', padding: '0.45rem 0.9rem', borderRadius: '6px', cursor: 'pointer', transition: 'background 0.2s, color 0.2s' }}
+                          onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--border-main)' }}
+                          onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--brand-bg)' }}
+                        >
+                          Download CCNA_Simulator ⬇
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               )
